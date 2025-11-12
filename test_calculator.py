@@ -1,3 +1,6 @@
+# https://github.com/sauceWHY/lab11-KP-MJ
+# Partner 1: Keith Pennock
+# Partner 2: Micah Jaffa
 import unittest
 from calculator import *
 
