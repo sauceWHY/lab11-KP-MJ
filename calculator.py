@@ -1,3 +1,6 @@
+# https://github.com/sauceWHY/lab11-KP-MJ
+# Partner 1: Keith Pennock
+# Partner 2: Micah Jaffa
 import math
 """
 calculator.py
@@ -9,7 +12,10 @@ import math
 
 # First example
 def square_root(a):
-    return math.sqrt(a)
+    if a < 0:
+        return ValueError
+    else:
+        return math.sqrt(a)
 
 def hypotenuse(a, b):
     return math.hypot(a, b)
@@ -30,10 +36,11 @@ def div(a, b):
         raise ZeroDivisionError
     
 def log(a, b):
-    try:
-        return math.log(b, a)# use math library + raise ValueError
-    except:
+    if a <= 0:
         raise ValueError
+    else:
+        return math.log(b, a)# use math library + raise ValueError
+            
 
 def exp(a, b):
     return a ** b
