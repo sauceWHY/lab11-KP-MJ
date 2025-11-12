@@ -69,6 +69,9 @@ class TestCalculator(unittest.TestCase):
     #     # Test for invalid argument, example:
         with self.assertRaises(ValueError):
             square_root(-3)
+        self.assertEqual(square_root(9), 3)
+        self.assertEqual(square_root(4), 2)
+        
 
 # Do not touch this
 if __name__ == "__main__":
