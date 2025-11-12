@@ -13,9 +13,9 @@ class TestCalculator(unittest.TestCase):
     #     fill in code
 
     def test_subtract(self): # 3 assertions
-        self.assertEqual(sub(5,3), 2)
-        self.assertEqual(sub(5,-5), 10)
-        self.assertEqual(sub(-5,-3), -2)
+        self.assertEqual(subtract(5,3), 2)
+        self.assertEqual(subtract(5,-5), 10)
+        self.assertEqual(subtract(-5,-3), -2)
     #     fill in code
     # ##########################
 
@@ -43,14 +43,14 @@ class TestCalculator(unittest.TestCase):
     #     fill in code
 
     def test_logarithm(self): # 3 assertions
-        self.assertEqual(log(10, 10), 1)
-        self.assertEqual(log(2, 8), 3)
-        self.assertEqual(log(3, 9), 2)
+        self.assertEqual(logarithm(10, 10), 1)
+        self.assertEqual(logarithm(2, 8), 3)
+        self.assertEqual(logarithm(3, 9), 2)
     #     fill in code
 
     def test_log_invalid_base(self): # 1 assertion
         with self.assertRaises(ValueError):
-            log(0, 10)
+            logarithm(0, 10)
     #     # use same technique from test_divide_by_zero
     #     fill in code
     # ##########################
@@ -58,7 +58,7 @@ class TestCalculator(unittest.TestCase):
     ######## Partner 1
     def test_log_invalid_argument(self): # 1 assertion
         with self.assertRaises(ValueError):
-            log(0, 10)
+            logarithm(0, 10)
 
     def test_hypotenuse(self): # 3 assertions
         self.assertEqual(hypotenuse(3, 4), 5)
@@ -69,7 +69,8 @@ class TestCalculator(unittest.TestCase):
     #     # Test for invalid argument, example:
         with self.assertRaises(ValueError):
             square_root(-3)
-        self.assertEqual(square_root(9), 3)
+        with self.assertRaises(ValueError):
+            square_root(-9)
         self.assertEqual(square_root(4), 2)
         
 
